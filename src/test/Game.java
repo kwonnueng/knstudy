@@ -1,5 +1,6 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
@@ -13,7 +14,11 @@ public class Game {
 		Scanner sc=new Scanner(System.in);
 		name=sc.nextLine();
 		Guest gName= new Guest(name);
-		arr[i]??
+		String getName=g.getName();
+		//String setName=g.setName();
+		//ArrayList<Guest> guest = new ArrayList<Guest>();
+		//guest.add(gName);
+		
 	}
 
 	 }
