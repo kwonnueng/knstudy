@@ -11,7 +11,11 @@ public class Game {
 
 	for(int i =0; i<arr.length;i++){
 		String name ="";
+		int number=0;
 		Scanner sc=new Scanner(System.in);
+		number=sc.nextInt();
+		
+		
 		name=sc.nextLine();
 		Guest gName= new Guest(name);
 		String getName=g.getName();
