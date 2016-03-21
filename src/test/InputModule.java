@@ -5,17 +5,10 @@ import java.util.Scanner;
 
 public class InputModule {
 	//srp 단일책임원칙 객체지향
-
+	Scanner sc=new Scanner(System.in);
 	public int getNum(){
-		Scanner sc=new Scanner(System.in);
-		//자바는 C처럼 미리 int num;을 만들피료없다
-		//선언한 즉시 stack에
-		//컴파일할때 에러잡는 코드가 좋다
-		//Runtime에러라는건 값이 변할때 컴파일에러는 아니더라
-		//Logical에러 내가 기대했던
-		//가장최소의범위에다 선언하라
-		//들여쓰기 확실히하기
-		//변수이름은 확실하게
+	
+	
 		System.out.println("몇명인지?");
 		int num=sc.nextInt();
 		sc.nextLine();
@@ -26,7 +19,7 @@ public class InputModule {
 		Guest[] a = new Guest[num];
 		for(int i=0;i<num;i++){
 
-			Scanner sc=new Scanner(System.in);
+			
 			String name;
 			System.out.println("이름입력하세요");
 			name=sc.nextLine();//엔터까지받는다 nextLine은 int는 엔터전까지
@@ -55,13 +48,15 @@ public class InputModule {
 		return a;
 	}
 	public char direction(){
-		Scanner sc=new Scanner(System.in);
+		
 		System.out.println("방향입력하세요");
 		String dir= sc.nextLine();
 		// dir.charAt(0);
 		// return sc.nextLine(); 자체가 return은 String이니깐
 		return dir.charAt(0);
 	}
-
-
+	public void close(){
+		sc.close();
+	}
+	
 }

@@ -34,16 +34,34 @@ public class Main {
 		Guest[] guests=ip.input(num);
 		Game game=new Game(num);
 
+
 		for(Guest guest:guests){
 			game.receipt(guest);
 		}
 		for(int i =0; i<num; i++){
-			game.process(ip.direction());
+			try{
+				game.process(ip.direction());
+			}
+			catch(InvalidDirectionException e){
+				System.out.println(e.getMessage());
+			}
 		}
-
+		ip.close();
 	}
 
-
+/*
+ * 1.i를 증가하지않고 
+ * 2.boolen isEmpty()
+ * 	true
+ * 
+ * 0=true
+ * 0 != false
+ * 
+ * process를 부르던 for문을 while로바꾸고 이것을 
+ * while(game.isEmpty()_
+ * 다시 try catch로 잡고 char dir= input.nextint로 받는
+ * process(dir)방향을 다시받는...
+ */
 
 }
 

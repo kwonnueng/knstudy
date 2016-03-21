@@ -16,7 +16,7 @@ public class Game {
 		//사이즈에 맞춰서 guest배열안에 이름을 차곡차곡 넣는다
 	}
 	//
-	public void process(char c){
+	public void process(char c) throws InvalidDirectionException{
 		if(size==0){
 			System.err.println("더 이상 없 습니다");
 			//System.out.println();
@@ -46,8 +46,12 @@ public class Game {
 			guests=b;
 			size--;
 		}
-
-
+		else{
+			String reason=c+"는적절한 문자가 아니다";
+			InvalidDirectionException e = new InvalidDirectionException(reason);
+			throw e;
+		}
+		
 	}
 }
 
