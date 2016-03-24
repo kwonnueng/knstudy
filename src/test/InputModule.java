@@ -7,8 +7,6 @@ public class InputModule {
 	//srp 단일책임원칙 객체지향
 	Scanner sc=new Scanner(System.in);
 	public int getNum(){
-	
-	
 		System.out.println("몇명인지?");
 		int num=sc.nextInt();
 		sc.nextLine();
@@ -51,6 +49,7 @@ public class InputModule {
 		
 		System.out.println("방향입력하세요");
 		String dir= sc.nextLine();
+		//변수 선언따로 초기화 따로하지말고 바로 초기화하면서 선언
 		// dir.charAt(0);
 		// return sc.nextLine(); 자체가 return은 String이니깐
 		return dir.charAt(0);

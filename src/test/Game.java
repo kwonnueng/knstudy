@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Game {
 	Guest[] guests;
 	int size=0;
-
 	public Game(int num){
 		guests=new Guest[num];
 	}
@@ -49,9 +48,23 @@ public class Game {
 		else{
 			String reason=c+"는적절한 문자가 아니다";
 			InvalidDirectionException e = new InvalidDirectionException(reason);
+			System.out.println("여기테스트");
 			throw e;
+			
 		}
-		
+
+	}
+	public boolean isEmpty(){
+		//현재 손님이 있으면 true,남아있다면 false를 리턴하도록 짜세요 
+
+
+		if(size==0){
+			System.out.println("다 빠졌습니다 isEmpty() size가 0이되었습니다");
+			return true;
+		}
+		else{	
+			return false;
+		}
 	}
 }
 

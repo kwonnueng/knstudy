@@ -38,17 +38,38 @@ public class Main {
 		for(Guest guest:guests){
 			game.receipt(guest);
 		}
-		for(int i =0; i<num; i++){
+		while(!game.isEmpty()){
+			
 			try{
 				game.process(ip.direction());
+				
 			}
 			catch(InvalidDirectionException e){
 				System.out.println(e.getMessage());
+				
 			}
 		}
+		System.out.println("다나갔습니다(while문 빠져나와 던지는 메세지입니다)");
 		ip.close();
+		
+		
+		/////////////
+		for(int i =0; i<num; i++){
+			try{
+				game.process(ip.direction());
+				
+			}
+			catch(InvalidDirectionException e){
+				System.out.println(e.getMessage());
+				System.out.println("현재i는"+i);
+			//i를 멈추고 다시 input
+			}
+		}
+		
+		
 	}
-
+	
+}
 /*
  * 1.i를 증가하지않고 
  * 2.boolen isEmpty()
@@ -61,8 +82,22 @@ public class Main {
  * while(game.isEmpty()_
  * 다시 try catch로 잡고 char dir= input.nextint로 받는
  * process(dir)방향을 다시받는...
+ *
+ *
+ *for(int i =0; i<num; i++){
+			try{
+				game.process(ip.direction());
+				
+			}
+			catch(InvalidDirectionException e){
+				System.out.println(e.getMessage());
+				
+			}
+		}
+		ip.close();
+ *
+ *
+ *
  */
-
-}
 
 
