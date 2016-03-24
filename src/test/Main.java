@@ -51,10 +51,12 @@ public class Main {
 		}
 		System.out.println("다나갔습니다(while문 빠져나와 던지는 메세지입니다)");
 		ip.close();
+	}
+}
 		
-		
-		/////////////
+		/*/////////////
 		for(int i =0; i<num; i++){
+			//for(int i=0; i<5
 			try{
 				game.process(ip.direction());
 				
@@ -62,14 +64,15 @@ public class Main {
 			catch(InvalidDirectionException e){
 				System.out.println(e.getMessage());
 				System.out.println("현재i는"+i);
-			//i를 멈추고 다시 input
+				i--;
+				//for문 도는 순서에따라 catch가 잡혔다면 i--
 			}
 		}
 		
 		
 	}
 	
-}
+}*/
 /*
  * 1.i를 증가하지않고 
  * 2.boolen isEmpty()
